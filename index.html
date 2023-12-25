@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <section>
+    <div class=" main position-relative">
+    <div class="container d-flex flex-column justify-content-center align-items-center pt-5">
+     <h1 class="position-relative">Bookmarker</h1>
+    <div class="book-form mt-5" >
+    <h2><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h2>
+    <div class="w-100 px-3 mt-3"> 
+    <label class="my-2 fw-bolder fs-6" for=""><i class="fa-solid fa-book-bookmark"></i> Site Name</label>
+    <input oninput="onvalidateName()" class="w-100  mb-2 form-control siteInput " type="text" placeholder="Bookmark Name">
+    <div class="siteNameErrorDiv invalid-feedback d-none  py-1 rounded-1 px-3 ">
+      Please Enter a valid Name
+    </div>
+    <label class="my-2 fw-bolder fs-6  " for=""><i class="fa-solid fa-link"></i> Site URL</label>
+    <input oninput="onValidateUrl()" class="w-100 form-control urlInput" type="text" placeholder="Website URL">
+      <div class=" urlErrorDiv invalid-feedback d-none py-1 rounded-1 px-3">
+        Please Enter a valid url
+      </div>
+  </div>
+<div> <button  class="sub-btn">Submit</button>
+  <button class="clearBtn btn btn-dark">Clear</button>
+</div>
+   
+    </div>
+      <div class="table">
+        
+        <div class="table-responsive text-center">
+          <button id="deleteAll" class="btn btn-dark d-flex justify-content-start mt-3">Delete All</button>
+          <table class="table  mt-3">
+            <thead>
+            
+
+              <tr>
+                <th scope="col">Index</th>
+                <th scope="col">Website Name</th>
+                <th scope="col">Visit</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+            
+            </tbody>
+          </table>
+        </div>
+        
+      </div>
+      </div>
+      
+    </div>
+  </section>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
